@@ -277,6 +277,74 @@ footer.background-blue div.social-footer {
   margin-top: 30px;
 }
 
+.teste {
+  margin-top: 100px;
+  width: 100%;
+  height: 300px;
+  background-image: url("../images/form-background.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+.teste form {
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  height: 80%;
+  background-color: #FDF0E999;
+  border-radius: 8px;
+  position: relative;
+  left: 30px;
+  top: 20px;
+}
+.teste form h2 {
+  margin: 0 0 10px;
+  font-size: 1.1em;
+}
+.teste form input {
+  all: unset;
+  border: 1px solid #39140080;
+  border-radius: 6px;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+.teste form .assunto {
+  position: relative;
+}
+.teste form .assunto select {
+  all: unset;
+  border: 1px solid #39140080;
+  border-radius: 6px;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+.teste form .assunto img {
+  width: 15px;
+  position: absolute;
+  z-index: 5;
+  top: 5px;
+  right: 55px;
+}
+.teste form .assunto select {
+  position: relative;
+}
+.teste form textarea {
+  border-radius: 6px;
+  color: unset;
+}
+.teste form button {
+  all: unset;
+  border: 1px solid #39140080;
+  background-color: #FDF0E9;
+  border-radius: 4px;
+  align-self: center;
+  padding: 3px;
+  margin-top: 10px;
+}
+.teste form button:hover {
+  transform: scale(1.1);
+}
+
 .show-mobile {
   display: flex;
 }
@@ -322,7 +390,7 @@ button:hover, a:hover {
   }
 
   .background-salmon {
-    padding: 0 135px;
+    padding: 0 135px 100px;
   }
 
   .partners {
@@ -360,6 +428,29 @@ button:hover, a:hover {
     border-bottom: initial;
     border-left: 1px solid #F3D1BF;
     border-right: 1px solid #F3D1BF;
+  }
+
+  footer.background-blue {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 30px;
+  }
+  footer.background-blue div.list-footer {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  footer.background-blue div.social-footer {
+    margin-top: 20px;
+  }
+
+  .teste {
+    height: 350px;
+  }
+  .teste form {
+    height: 250px;
+    width: 200px;
   }
 }
 @media screen and (min-width: 870px) {
