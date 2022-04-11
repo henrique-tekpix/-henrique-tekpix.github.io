@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Este é um projeto desenvolvido pela HCode e o projeto Jornaduca">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/logo.svg" />
     <title>Tek Pix</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,7 +114,7 @@
                 <p>Produtos vendidos</p>
             </div>
         </div>
-        <div class="produtos">  
+        <div class="produtos">
             <div class="produto img1">
                 <h4>TekPix2020</h4>
                 <span>A mais vendida do ano</span>
@@ -132,7 +133,7 @@
             </div>
 
         </div>
-        
+
         <div class="teste">
             <form action="">
                 <h2>Fale conosco!</h2>
@@ -206,15 +207,15 @@
 <script>
 
     const getElementFadeIn = (el, scroll) => {
-            const offSet = el.offsetTop;
+        const offSet = el.offsetTop;
 
-            const windowHeight = window.innerHeight;
+        const windowHeight = window.innerHeight;
 
-            if (scroll > offSet) {
-                el.classList.add('fadeUp');
-            } else {
-                el.classList.remove('fadeUp');
-            }
+        if (scroll > offSet) {
+            el.classList.add('fadeUp');
+        } else {
+            el.classList.remove('fadeUp');
+        }
     }
 
 
@@ -226,8 +227,8 @@
             header.classList.add('scroll');
         } else {
             header.classList.remove('scroll');
-        } 
-        document.querySelectorAll(".animateFadeUp").forEach((element)=>{
+        }
+        document.querySelectorAll(".animateFadeUp").forEach((element) => {
             getElementFadeIn(element, scroll);
 
         })
