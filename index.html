@@ -45,7 +45,7 @@
 
         <section>
             <div class="container">
-                <div class="text-description">
+                <div class="text-description fadeLeft">
                     <span>A CAMERA MAIS VENDIDA DO BRASIL</span>
                     <h2>
                         Garanta Já Sua Nova TekPix
@@ -59,7 +59,7 @@
                         <a href="#">Saiba Mais</a>
                     </div>
                 </div>
-                <div class="img-cam">
+                <div class="img-cam fadeRight">
                     <img src="./assets/images/hero-camera.png" alt="Camera">
                 </div>
             </div>
@@ -74,7 +74,7 @@
     </div>
 
     <div class="background-salmon">
-        <div class="partners">
+        <div class="partners animateFadeUp">
             <img src="./assets/images/Digitalside.png" alt="Digitalside">
             <img src="./assets/images/Vortex.png" alt="Vortex">
             <img src="./assets/images/Travel Explorer.png" alt="Travel Explorer">
@@ -113,7 +113,26 @@
                 <p>Produtos vendidos</p>
             </div>
         </div>
+        <div class="produtos">  
+            <div class="produto img1">
+                <h4>TekPix2020</h4>
+                <span>A mais vendida do ano</span>
+            </div>
+            <div class="produto img2">
+                <h4>TekPix2021</h4>
+                <span>A mais vendida do ano</span>
+            </div>
+            <div class="produto img3">
+                <h4>TekPix PRO</h4>
+                <span>A mais vendida do ano</span>
+            </div>
+            <div class="produto img4">
+                <h4>TPx360 Cin</h4>
+                <span>A mais vendida do ano</span>
+            </div>
 
+        </div>
+        
         <div class="teste">
             <form action="">
                 <h2>Fale conosco!</h2>
@@ -129,14 +148,13 @@
                         <option value="outro">Outro</option>
                     </select>
                 </div>
-    
-                <textarea name="" id="" cols="30" rows="10" placeholder="Digite sua mensagem..." style="background-color:#FDF0E990;"></textarea>
+
+                <textarea name="" id="" cols="30" rows="10" placeholder="Digite sua mensagem..."
+                    style="background-color:#FDF0E990;"></textarea>
                 <button>ENVIAR</button>
             </form>
         </div>
 
-        <div class="fomr-section">
-        </div>
     </div>
 
     <footer class="background-blue">
@@ -186,14 +204,33 @@
 </body>
 
 <script>
+
+    const getElementFadeIn = (el, scroll) => {
+            const offSet = el.offsetTop;
+
+            const windowHeight = window.innerHeight;
+
+            if (scroll > offSet) {
+                el.classList.add('fadeUp');
+            } else {
+                el.classList.remove('fadeUp');
+            }
+    }
+
+
     document.addEventListener('scroll', (event) => {
-        const scroll = window.scrollY;
+        const scroll = Number(window.scrollY);
         const header = document.querySelector('header');
+
         if (scroll > 100) {
             header.classList.add('scroll');
         } else {
             header.classList.remove('scroll');
-        }
+        } 
+        document.querySelectorAll(".animateFadeUp").forEach((element)=>{
+            getElementFadeIn(element, scroll);
+
+        })
     });
 </script>
 

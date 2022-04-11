@@ -389,6 +389,51 @@ footer.background-blue{
     
 }
 
+.produtos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 15px;
+    .produto{
+        width: 100%x;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        span{
+            margin: 0 0 10px 10px;
+            font-weight: 800;
+            font-size: 12px;
+        }
+        h4{
+            margin: 10px;
+            background-color: #FFFFFF;
+            padding: 5px;
+            border-radius: 10px;
+        }   
+    }
+    .produto:hover{
+        transform: scale(1.1);
+        opacity: 85%;
+    }
+    .img1{
+        background-image: url("../images/produto1.jpg");
+        background-size: cover;
+    }.img2{
+        background-image: url("../images/produto2.jpg");
+        background-size: cover;
+    }
+    .img3{
+        background-image: url("../images/produto3.jpg");
+        background-size: cover;
+    }
+    .img4{
+        background-image: url("../images/produto4.jpg");
+        background-size: cover;
+    }
+}
+
 
 .show-mobile {
     display: flex;
@@ -398,10 +443,66 @@ footer.background-blue{
     display: none;
 }
 
+@keyframes fadeLeftAnimation{
+    from{
+        transform: translateX(-300px);
+        opacity:0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
+
+.fadeLeft{
+    
+    animation-name: fadeLeftAnimation;
+    animation-duration: 1s;
+    animation-delay:0.5s;
+}
+
+@keyframes fadeRightAnimation{
+    from{
+        transform: translateX(300px);
+        opacity:0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
+
+.fadeRight{
+    
+    animation-name: fadeRightAnimation;
+    animation-duration: 1s;
+    animation-delay:0.5s;
+}
+
+@keyframes fadeUpAnimation{
+    from{
+        transform: translateY(300px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity:1;
+    }
+}
+
+.fadeUp{
+    
+    animation-name: fadeUpAnimation;
+    animation-duration: 1s;
+    animation-delay:0.5s;
+}
+
 span {
     color: #EF6D58;
     letter-spacing: 1.5px;
 }
+
+
 
 button:hover, a:hover{
     transform: scale(1.1);
@@ -501,6 +602,21 @@ button:hover, a:hover{
         form{
             height: 250px;
             width: 200px;
+            .assunto{
+                img{
+                    left: 80px
+                }
+            }
+        }
+    }
+    .produtos{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        row-gap: 25px;
+        column-gap: 25px;
+        .produto{
+            height: 350px;
+            width: 100%;
         }
     }
 }
@@ -528,4 +644,14 @@ button:hover, a:hover{
             padding-left: 130px;
         }
     }
+    .teste{
+        height: 550px;
+        form{
+            height: 350px;
+            width: 250px;
+            left: 80px;
+            top: 80px;
+        }
+    }
+
 }
